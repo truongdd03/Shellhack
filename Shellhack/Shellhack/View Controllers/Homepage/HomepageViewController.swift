@@ -10,10 +10,17 @@ import Firebase
 import FirebaseFirestoreSwift
 
 class HomepageViewController: UIViewController {
-
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var PointLabel: UILabel!
     
     static var username: String?
+    static var totalVotes: Int?
+    static var rightVotes: Int?
+    static var wrongVotes: Int?
+    static var votesScores: Int?
+    
+    var circularProgressBarView: CircularProgressBarView!
+    var circularViewDuration: TimeInterval = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +29,32 @@ class HomepageViewController: UIViewController {
         nameLabel.text = HomepageViewController.username ?? ""
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.right.doc.on.clipboard"), style: .plain, target: self, action: #selector(logOut))
+
+        calculateOverallPoint()
+    }
+    
+    func calculateOverallPoint() {
+        var point = 0
+        for post in AllPostsViewController.myPosts! {
+            point += post.calculatePoint() ?? 0
+        }
         
+        point = min(100, point + HomepageViewController.votesScores!)
+        point = point / AllPostsViewController.myPosts!.count
+        
+        PointLabel.text = String(point)
+        
+        var tmp: CGFloat = CGFloat(point)
+        tmp = tmp / 100
+        setUpCircularProgressBarView(to: tmp)
+    }
+    
+    func setUpCircularProgressBarView(to toValue: CGFloat) {
+        circularProgressBarView = CircularProgressBarView(frame: .zero)
+        circularProgressBarView.center = view.center
+        circularProgressBarView.progressAnimation(duration: circularViewDuration, to: toValue)
+
+        view.addSubview(circularProgressBarView)
     }
     
     @objc func logOut() {

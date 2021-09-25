@@ -63,13 +63,35 @@ class NewsfeedTableViewCell: UITableViewCell {
         if sender.tag == 0 {
             DownVoteButton.setImage(UIImage(systemName: "hand.thumbsup.fill"), for: .normal)
             post!.upVotes += 1
+            validateVote(vote: "up")
         } else {
             DownVoteButton.setImage(UIImage(systemName: "hand.thumbsdown.fill"), for: .normal)
             post!.downVotes += 1
+            validateVote(vote: "down")
         }
+        DownVoteButton.isEnabled = false
         
         Writer.updatePost(postID: id!, post: post!)
         
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateScore"), object: nil)
+    }
+    
+    func validateVote(vote: String) {
+        HomepageViewController.totalVotes! += 1
+        guard let point = point else { return }
+        
+        var rightAns = "up"
+        if point <= 35 {
+            rightAns = "down"
+        } else if point < 65 {
+            return
+        }
+                
+        if rightAns != vote {
+            HomepageViewController.wrongVotes! += 1
+        } else {
+            HomepageViewController.rightVotes! += 1
+        }
     }
 
 }

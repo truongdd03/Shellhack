@@ -24,23 +24,43 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dong Truong" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGo-JU-Avz">
-                                <rect key="frame" x="150" y="228" width="114" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <rect key="frame" x="137.5" y="228" width="139" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="C8L-53-VYu">
+                                <rect key="frame" x="164" y="384" width="86.5" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tZ-dP-m4x">
+                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="71"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="50"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlP-ba-jwE">
+                                        <rect key="frame" x="0.0" y="71" width="86.5" height="57"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pcr-Fw-2ng"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hGo-JU-Avz" firstAttribute="centerX" secondItem="i1Z-h8-QE8" secondAttribute="centerX" id="3C6-m4-QVC"/>
+                            <constraint firstItem="C8L-53-VYu" firstAttribute="centerX" secondItem="i1Z-h8-QE8" secondAttribute="centerX" id="3aW-Nq-rcv"/>
                             <constraint firstItem="Dbl-94-hAs" firstAttribute="top" secondItem="pcr-Fw-2ng" secondAttribute="top" constant="30" id="Ikg-3M-yhP"/>
                             <constraint firstItem="hGo-JU-Avz" firstAttribute="top" secondItem="Dbl-94-hAs" secondAttribute="bottom" constant="10" id="NoR-KK-8Dj"/>
                             <constraint firstItem="Dbl-94-hAs" firstAttribute="centerX" secondItem="i1Z-h8-QE8" secondAttribute="centerX" id="P95-9m-57u"/>
+                            <constraint firstItem="C8L-53-VYu" firstAttribute="centerY" secondItem="i1Z-h8-QE8" secondAttribute="centerY" id="xm1-qz-2Wg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1Lg-Qw-T4C"/>
                     <connections>
+                        <outlet property="PointLabel" destination="0tZ-dP-m4x" id="DQH-la-tuJ"/>
                         <outlet property="nameLabel" destination="hGo-JU-Avz" id="r82-K3-bGI"/>
                     </connections>
                 </viewController>
@@ -75,8 +95,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

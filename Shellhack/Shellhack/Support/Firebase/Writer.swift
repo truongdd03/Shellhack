@@ -36,4 +36,20 @@ class Writer {
             print("Error")
         }
     }
+    
+    static func updateVotes() {
+        let uid = Auth.auth().currentUser!.uid
+        let ref = Database.database().reference().child("Votes").child(uid)
+        
+        ref.child("Total").setValue(HomepageViewController.totalVotes)
+        
+        ref.child("Right").setValue(HomepageViewController.rightVotes)
+        
+        ref.child("Wrong").setValue(HomepageViewController.wrongVotes)
+    }
+    
+    static func updateVoteScore() {
+        let uid = Auth.auth().currentUser!.uid
+        Database.database().reference().child("VoteScore").child(uid).setValue(HomepageViewController.votesScores)
+    }
 }

@@ -47,6 +47,8 @@ class NewsfeedViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewsfeed), name: NSNotification.Name(rawValue: "loadNewsfeed"), object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(updateScore), name: NSNotification.Name(rawValue: "updateScore"), object: nil)
+
         fetchData()
     }
     
@@ -72,6 +74,44 @@ class NewsfeedViewController: UIViewController {
                 self.loadNext(index: i)
             }
         }
+    }
+    
+    @objc func updateScore() {
+        let total = HomepageViewController.totalVotes!
+        var point = 0
+        if total > 0 && total % 6 == 0 {
+            HomepageViewController.totalVotes! += 1
+            point += 1
+        }
+        
+        let right = HomepageViewController.rightVotes!
+        if right > 0 && right % 6 == 0 {
+            HomepageViewController.rightVotes! += 1
+            point += 3
+        }
+        
+        let wrong = HomepageViewController.wrongVotes!
+        if wrong > 0 && wrong % 6 == 0 {
+            HomepageViewController.wrongVotes! += 1
+            point -= 6
+        }
+        
+        HomepageViewController.votesScores! += point
+        
+        if point < 0 {
+            alert(title: "\(point)", message: "Please vote more carefully!")
+        } else if point > 0 {
+            alert(title: "+\(point)", message: "Thank you for voting posts!")
+        }
+        
+        Writer.updateVotes()
+        Writer.updateVoteScore()
+    }
+    
+    func alert(title: String, message: String) {
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(ac, animated: true)
     }
     
     @objc func searchTapped() {

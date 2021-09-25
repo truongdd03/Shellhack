@@ -44,7 +44,6 @@ class Post: NSObject, Codable {
         }
         
         let point = self.upVotes * 100 / (self.upVotes + self.downVotes)
-
         return Int(point)
     }
     

@@ -16,6 +16,8 @@ class Fetcher {
     static func fetchAll() {
         fetchUsername()
         fetchMyPosts()
+        fetchVotes()
+        fetchVoteScore()
     }
     
     static func fetchUsername() {
@@ -108,5 +110,26 @@ class Fetcher {
         }
         
         completion(postsID)
+    }
+    
+    static func fetchVotes() {
+        let uid = Auth.auth().currentUser!.uid
+        let ref = Database.database().reference().child("Votes").child(uid)
+        ref.child("Total").getData(completion: { err, snapshot in
+            HomepageViewController.totalVotes = snapshot.value as? Int ?? 0
+        })
+        ref.child("Right").getData { err, snapshot in
+            HomepageViewController.rightVotes = snapshot.value as? Int ?? 0
+        }
+        ref.child("Wrong").getData { err, snapshot in
+            HomepageViewController.wrongVotes = snapshot.value as? Int ?? 0
+        }
+    }
+    
+    static func fetchVoteScore() {
+        let uid = Auth.auth().currentUser!.uid
+        Database.database().reference().child("VoteScore").child(uid).getData { err, snapshot in
+            HomepageViewController.votesScores = snapshot.value as? Int ?? 0
+        }
     }
 }
