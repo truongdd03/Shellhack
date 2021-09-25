@@ -71,7 +71,7 @@ class SignUpViewController: UIViewController {
         if !validateInputs() { return }
         
         let email = EmailInput.text!
-        //let username = FirstNameInput.text! + " " + LastNameInput.text!
+        let username = FirstNameInput.text! + " " + LastNameInput.text!
         let password = PasswordInput.text!
         
         Auth.auth().createUser(withEmail: email, password: password) { (res, err) in
@@ -80,7 +80,7 @@ class SignUpViewController: UIViewController {
                 return
             }
 
-            //Writer.writeUsername(username: username)
+            Writer.writeUsername(username: username)
             self.transitToNewsfeed()
         }
     }

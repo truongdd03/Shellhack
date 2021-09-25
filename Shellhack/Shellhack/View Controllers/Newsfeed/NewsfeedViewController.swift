@@ -15,7 +15,7 @@ class NewsfeedViewController: UIViewController {
     var posts: [Post] = [Post]()
     var postsID: [String] = []
     var isApplicant = false
-    var name = "Opty"
+    var name = "Name"
     var postID: String?
     
     var index = -1
@@ -46,24 +46,16 @@ class NewsfeedViewController: UIViewController {
     }
     
     func fetchData() {
-        /*if SkillsViewController.tags == nil {
-            Fetcher.fetchTags {
-                Fetcher.fetchPostID(keywords: SkillsViewController.tags!) { (ids) in
-                    self.postsID = ids
-                    
-                    print(self.postsID)
-                    
-                    for i in 0...5 {
-                        self.loadNext(index: i)
-                    }
-                }
-            }
+        if HomepageViewController.username == nil {
             Fetcher.fetchAll()
+            for i in 0...5 {
+                self.loadNext(index: i)
+            }
         } else {
             for i in 0...5 {
                 self.loadNext(index: i)
             }
-        }*/
+        }
     }
     
     @objc func searchTapped() {

@@ -16,7 +16,7 @@ class PostTableViewCell: UITableViewCell {
 
     var point: Int? {
         didSet {
-            PointLabel.text = String(point!)
+            PointLabel.text = "0"
         }
     }
     

@@ -63,15 +63,15 @@ class NewpostViewController: UIViewController, UITextFieldDelegate {
     @IBAction func PostButtonTapped(_ sender: Any) {
         if !validateInputs() { return }
     
-        //let post = Post(userName: HomepageViewController.username!, date: "", title: CompanyInput.text!, content: ContentInput.text, tags: NewpostViewController.tags, address: address)
-        //post.updateDate()
-        //post.id = Writer.writePost(post: post)
-        //AllPostsViewController.myPosts!.append(MyPost(post: post, applicants: 0))
+        let post = Post(userName: HomepageViewController.username!, date: "", affirmation: AffirmationInput.text, content: ContentInput.text)
+        post.updateDate()
+        post.id = Writer.writePost(post: post)
+        AllPostsViewController.myPosts!.append(MyPost(post: post, point: 0))
 
         //Index.updatePost(tags: post.tags, content: post.content, postID: post.id!, isDelete: false)
         
         resetInputs()
-        //alert(title: "Successfully posted!", message: "")
+        alert(title: "Successfully posted!", message: "")
     }
     
 }
