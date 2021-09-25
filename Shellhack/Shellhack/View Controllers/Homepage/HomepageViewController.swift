@@ -13,6 +13,8 @@ class HomepageViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var PointLabel: UILabel!
     
+    @IBOutlet weak var NotificationLabel: UILabel!
+    
     static var username: String?
     static var totalVotes: Int?
     static var rightVotes: Int?
@@ -22,6 +24,10 @@ class HomepageViewController: UIViewController {
     var circularProgressBarView: CircularProgressBarView!
     var circularViewDuration: TimeInterval = 1
     
+    override func viewWillAppear(_ animated: Bool) {
+        updatePointLabel()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,23 +36,40 @@ class HomepageViewController: UIViewController {
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.right.doc.on.clipboard"), style: .plain, target: self, action: #selector(logOut))
 
-        calculateOverallPoint()
     }
     
-    func calculateOverallPoint() {
-        var point = 0
-        for post in AllPostsViewController.myPosts! {
-            point += post.calculatePoint() ?? 0
-        }
-        
-        point = min(100, point + HomepageViewController.votesScores!)
-        point = point / AllPostsViewController.myPosts!.count
-        
+    func updatePointLabel() {
+        let point = HomepageViewController.calculateOverallPoint()
         PointLabel.text = String(point)
         
         var tmp: CGFloat = CGFloat(point)
         tmp = tmp / 100
         setUpCircularProgressBarView(to: tmp)
+        
+        if point < 20 {
+            NotificationLabel.text = "You are banned due to the low score! You can only read other posts now."
+            NotificationLabel.isHidden = false
+        } else if point < 50 {
+            NotificationLabel.text = "You cannot create new posts! Please vote for others' posts carefully to increase your score."
+            NotificationLabel.isHidden = false
+        } else {
+            NotificationLabel.isHidden = true
+        }
+        
+    }
+    
+    static func calculateOverallPoint() -> Int{
+        var point = 0
+        for post in AllPostsViewController.myPosts! {
+            point += post.calculatePoint() ?? 0
+        }
+        
+        if AllPostsViewController.myPosts!.count != 0 {
+            point = point / AllPostsViewController.myPosts!.count
+        }
+        
+        point = min(100, point + HomepageViewController.votesScores!)
+        return point
     }
     
     func setUpCircularProgressBarView(to toValue: CGFloat) {

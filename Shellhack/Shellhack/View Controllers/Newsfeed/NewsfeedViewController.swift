@@ -49,6 +49,8 @@ class NewsfeedViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateScore), name: NSNotification.Name(rawValue: "updateScore"), object: nil)
 
+        NotificationCenter.default.addObserver(self, selector: #selector(showError), name: NSNotification.Name(rawValue: "showError"), object: nil)
+
         fetchData()
     }
     
@@ -74,6 +76,10 @@ class NewsfeedViewController: UIViewController {
                 self.loadNext(index: i)
             }
         }
+    }
+    
+    @objc func showError() {
+        alert(title: "Error", message: "Your account has been banned.")
     }
     
     @objc func updateScore() {

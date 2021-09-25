@@ -58,6 +58,11 @@ class NewsfeedTableViewCell: UITableViewCell {
     var post: Post?
     
     @IBAction func voteTapped(_ sender: UIButton) {
+        if !validatePermission() {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "showError"), object: nil)
+            return
+        }
+        
         UpVoteButton.isHidden = true
 
         if sender.tag == 0 {
@@ -92,6 +97,15 @@ class NewsfeedTableViewCell: UITableViewCell {
         } else {
             HomepageViewController.rightVotes! += 1
         }
+    }
+    
+    func validatePermission() -> Bool {
+        let point = HomepageViewController.calculateOverallPoint()
+        if point < 20 {
+            return false
+        }
+        
+        return true
     }
 
 }

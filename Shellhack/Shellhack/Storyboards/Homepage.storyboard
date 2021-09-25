@@ -46,6 +46,12 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPv-pQ-57A">
+                                <rect key="frame" x="20" y="662" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pcr-Fw-2ng"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -55,11 +61,15 @@
                             <constraint firstItem="Dbl-94-hAs" firstAttribute="top" secondItem="pcr-Fw-2ng" secondAttribute="top" constant="30" id="Ikg-3M-yhP"/>
                             <constraint firstItem="hGo-JU-Avz" firstAttribute="top" secondItem="Dbl-94-hAs" secondAttribute="bottom" constant="10" id="NoR-KK-8Dj"/>
                             <constraint firstItem="Dbl-94-hAs" firstAttribute="centerX" secondItem="i1Z-h8-QE8" secondAttribute="centerX" id="P95-9m-57u"/>
+                            <constraint firstItem="pcr-Fw-2ng" firstAttribute="trailing" secondItem="cPv-pQ-57A" secondAttribute="trailing" constant="20" id="Qfp-Sk-yL4"/>
+                            <constraint firstItem="cPv-pQ-57A" firstAttribute="top" secondItem="C8L-53-VYu" secondAttribute="bottom" constant="150" id="VEj-xu-4w9"/>
+                            <constraint firstItem="cPv-pQ-57A" firstAttribute="leading" secondItem="pcr-Fw-2ng" secondAttribute="leading" constant="20" id="ndJ-Zv-LPa"/>
                             <constraint firstItem="C8L-53-VYu" firstAttribute="centerY" secondItem="i1Z-h8-QE8" secondAttribute="centerY" id="xm1-qz-2Wg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1Lg-Qw-T4C"/>
                     <connections>
+                        <outlet property="NotificationLabel" destination="cPv-pQ-57A" id="BvI-Rz-VNE"/>
                         <outlet property="PointLabel" destination="0tZ-dP-m4x" id="DQH-la-tuJ"/>
                         <outlet property="nameLabel" destination="hGo-JU-Avz" id="r82-K3-bGI"/>
                     </connections>

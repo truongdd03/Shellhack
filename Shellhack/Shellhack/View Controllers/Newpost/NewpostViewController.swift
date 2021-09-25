@@ -52,6 +52,12 @@ class NewpostViewController: UIViewController, UITextFieldDelegate {
             return false
         }
         
+        let point = HomepageViewController.calculateOverallPoint()
+        if point < 50 {
+            alert(title: "Error", message: "You don't have permission to post.")
+            return false;
+        }
+        
         return true
     }
     
