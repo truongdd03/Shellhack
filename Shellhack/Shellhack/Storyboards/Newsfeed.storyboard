@@ -3,10 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -92,17 +90,17 @@
                                                         <constraint firstAttribute="height" constant="30" id="zce-El-xv2"/>
                                                     </constraints>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="752" text="Facebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVg-Pp-85Q">
-                                                    <rect key="frame" x="10" y="58" width="394" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="752" text="How to cure covid-19? Is covid-19 vaccines kill people? I am superman. I'll save the world. Look at me" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVg-Pp-85Q">
+                                                    <rect key="frame" x="10" y="58" width="394" height="61"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="20.5" id="dH5-De-Mud"/>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="dH5-De-Mud"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemBlueColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfx-Bb-tEK">
-                                                    <rect key="frame" x="10" y="83.5" width="394" height="216.5"/>
+                                                    <rect key="frame" x="10" y="124" width="394" height="176"/>
                                                     <string key="text">Fetch Technology Vietnam is a comprehensive global provider of HR and Talent Acquisition Services, focusing primarily in the technology fields. Founded in 2016, Fetch Technology Vietnam helps foreign companies of all types and sizes reach their potential by providing the talent and support to efficiently build and scale a high-performing, distributed workforce in Vietnam.
 
 Our mission is to offer Vietnam’s most talented technologists a platform to connect with some of the world’s leading tech companies and build their expertise on a global scale. Over 4 years, Fetch has built a good reputation and is trusted by many Vietnamese and foreign companies; And Fetch will continue its good work to bridge the divide between the World and the Vietnam Tech sector.</string>
@@ -170,56 +168,8 @@ Our mission is to offer Vietnam’s most talented technologists a platform to co
                                 <rect key="frame" x="0.0" y="88" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnf-1U-XEI">
-                                <rect key="frame" x="10" y="159" width="44" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <color key="textColor" systemColor="systemBlueColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gcz-vK-1Iq">
-                                <rect key="frame" x="10" y="193" width="394" height="150"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="QuV-6c-P4V"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6cu-QP-3c1">
-                                    <size key="itemSize" width="80" height="20"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TagCell" id="Icd-Mk-KrA" customClass="TagCollectionViewCell" customModule="Opty_IOS" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="5" width="80" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vJ1-f4-9zc">
-                                            <rect key="frame" x="0.0" y="0.0" width="80" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYn-mL-6m4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="20"/>
-                                                    <color key="backgroundColor" systemColor="systemTealColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="sYn-mL-6m4" firstAttribute="top" secondItem="vJ1-f4-9zc" secondAttribute="top" id="8fp-DS-0Ji"/>
-                                                <constraint firstAttribute="bottom" secondItem="sYn-mL-6m4" secondAttribute="bottom" id="Tcb-un-Mso"/>
-                                                <constraint firstAttribute="trailing" secondItem="sYn-mL-6m4" secondAttribute="trailing" id="fpx-YO-blM"/>
-                                                <constraint firstItem="sYn-mL-6m4" firstAttribute="leading" secondItem="vJ1-f4-9zc" secondAttribute="leading" id="lq0-1Q-13E"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="80" height="20"/>
-                                        <connections>
-                                            <outlet property="tagName" destination="sYn-mL-6m4" id="2Uh-gC-aT1"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5T-nK-7GH">
-                                <rect key="frame" x="107" y="373" width="200" height="30"/>
+                                <rect key="frame" x="107" y="239" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="2zn-Da-ZpV"/>
                                 </constraints>
@@ -229,43 +179,21 @@ Our mission is to offer Vietnam’s most talented technologists a platform to co
                                     <action selector="searchButtonTapped:" destination="mm1-xy-Whn" eventType="touchUpInside" id="LVR-MK-Qjk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7m-cA-4Vb">
-                                <rect key="frame" x="379" y="158.5" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="goG-vG-Ezl"/>
-                                    <constraint firstAttribute="height" constant="25" id="l2m-8g-ze1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <state key="normal" title="Button">
-                                    <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
-                                </state>
-                                <connections>
-                                    <action selector="addTagsButtonTapped:" destination="mm1-xy-Whn" eventType="touchUpInside" id="5vA-9h-2MS"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zqb-m7-9yD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="T5T-nK-7GH" firstAttribute="top" secondItem="rW8-ms-TbU" secondAttribute="bottom" constant="100" id="77C-UK-N1D"/>
                             <constraint firstItem="rW8-ms-TbU" firstAttribute="leading" secondItem="zqb-m7-9yD" secondAttribute="leading" id="81W-or-LrS"/>
                             <constraint firstItem="rW8-ms-TbU" firstAttribute="trailing" secondItem="zqb-m7-9yD" secondAttribute="trailing" id="Ehq-nU-i2b"/>
-                            <constraint firstItem="wnf-1U-XEI" firstAttribute="top" secondItem="rW8-ms-TbU" secondAttribute="bottom" constant="20" id="JSm-nz-515"/>
-                            <constraint firstItem="gcz-vK-1Iq" firstAttribute="leading" secondItem="zqb-m7-9yD" secondAttribute="leading" constant="10" id="PKV-Ny-6iH"/>
-                            <constraint firstItem="gcz-vK-1Iq" firstAttribute="top" secondItem="wnf-1U-XEI" secondAttribute="bottom" constant="10" id="jJV-K3-scK"/>
-                            <constraint firstItem="zqb-m7-9yD" firstAttribute="trailing" secondItem="gcz-vK-1Iq" secondAttribute="trailing" constant="10" id="jTb-k4-F6w"/>
                             <constraint firstItem="rW8-ms-TbU" firstAttribute="top" secondItem="zqb-m7-9yD" secondAttribute="top" id="kO2-9d-YXJ"/>
-                            <constraint firstItem="wnf-1U-XEI" firstAttribute="leading" secondItem="zqb-m7-9yD" secondAttribute="leading" constant="10" id="lEW-oa-ceC"/>
-                            <constraint firstItem="S7m-cA-4Vb" firstAttribute="centerY" secondItem="wnf-1U-XEI" secondAttribute="centerY" id="n5L-a0-cmP"/>
-                            <constraint firstItem="T5T-nK-7GH" firstAttribute="top" secondItem="gcz-vK-1Iq" secondAttribute="bottom" constant="30" id="omH-7G-F01"/>
                             <constraint firstItem="T5T-nK-7GH" firstAttribute="centerX" secondItem="yXM-1d-xlT" secondAttribute="centerX" id="sQS-Hl-9g8"/>
-                            <constraint firstItem="zqb-m7-9yD" firstAttribute="trailing" secondItem="S7m-cA-4Vb" secondAttribute="trailing" constant="10" id="tWk-kB-koB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="J8O-0F-hiC"/>
                     <connections>
                         <outlet property="KeywordsSearchBar" destination="rW8-ms-TbU" id="4PW-Yk-8AT"/>
                         <outlet property="SearchButton" destination="T5T-nK-7GH" id="I4o-JJ-kwF"/>
-                        <outlet property="TagsCollection" destination="gcz-vK-1Iq" id="vGY-vO-4WY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kxu-Hh-9IY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -275,16 +203,12 @@ Our mission is to offer Vietnam’s most talented technologists a platform to co
     </scenes>
     <resources>
         <image name="doc.richtext.fill" catalog="system" width="115" height="128"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="undefined_avatar" width="920" height="897"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

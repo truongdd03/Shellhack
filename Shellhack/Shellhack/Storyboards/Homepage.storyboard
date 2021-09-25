@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yrl-GC-n6Y">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Homepage View Controller-->
+        <scene sceneID="JRd-yW-33Q">
+            <objects>
+                <viewController storyboardIdentifier="Homepage" id="WMg-hJ-nQG" customClass="HomepageViewController" customModule="Shellhack" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i1Z-h8-QE8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undefined_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Dbl-94-hAs">
+                                <rect key="frame" x="157" y="118" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="KDq-k5-FSy"/>
+                                    <constraint firstAttribute="width" constant="100" id="a8r-94-5Xq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dong Truong" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGo-JU-Avz">
+                                <rect key="frame" x="150" y="228" width="114" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pcr-Fw-2ng"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hGo-JU-Avz" firstAttribute="centerX" secondItem="i1Z-h8-QE8" secondAttribute="centerX" id="3C6-m4-QVC"/>
+                            <constraint firstItem="Dbl-94-hAs" firstAttribute="top" secondItem="pcr-Fw-2ng" secondAttribute="top" constant="30" id="Ikg-3M-yhP"/>
+                            <constraint firstItem="hGo-JU-Avz" firstAttribute="top" secondItem="Dbl-94-hAs" secondAttribute="bottom" constant="10" id="NoR-KK-8Dj"/>
+                            <constraint firstItem="Dbl-94-hAs" firstAttribute="centerX" secondItem="i1Z-h8-QE8" secondAttribute="centerX" id="P95-9m-57u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Lg-Qw-T4C"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="hGo-JU-Avz" id="r82-K3-bGI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XBb-dg-ht5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204.6153846153845" y="164.21800947867297"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="yM7-ZC-V6Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yrl-GC-n6Y" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Account" image="person.fill" catalog="system" id="f4D-OB-ark"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wgy-7u-mRl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WMg-hJ-nQG" kind="relationship" relationship="rootViewController" id="L1g-ki-JTC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bj0-Va-H5O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="171" y="164"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="undefined_avatar" width="920" height="897"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

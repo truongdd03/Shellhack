@@ -73,16 +73,16 @@ class NewsfeedViewController: UIViewController {
     }
 }
 
-/*extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching {
+extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching {
 
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        for id in indexPaths {
-            loadNext(index: id.row)
-        }
+        //for id in indexPaths {
+        //    loadNext(index: id.row)
+        //}
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count + 1
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -90,7 +90,7 @@ class NewsfeedViewController: UIViewController {
             return UITableViewCell()
         }
     
-        /*let cell = tableView.dequeueReusableCell(withIdentifier: "NewsfeedCell", for: indexPath) as! NewsfeedTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsfeedCell", for: indexPath) as! NewsfeedTableViewCell
         let tmp = posts[indexPath.row]
         
         cell.id = tmp.id
@@ -99,17 +99,7 @@ class NewsfeedViewController: UIViewController {
         cell.date = tmp.date
         cell.title = tmp.title
         cell.content = tmp.content
-        cell.address = tmp.address
-        cell.selectionStyle = .none
-        cell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
-        if isApplicant {
-            cell.buttonTitle = "Reject"
-            cell.buttonClicked = false
-        } else {
-            cell.buttonTitle = "Send resume"
-            cell.buttonClicked = (NewsfeedViewController.postsSent!.contains(postsID[indexPath.row
-            ]))
-        }*/
+        
         return UITableViewCell()
     }
     
@@ -150,7 +140,7 @@ class NewsfeedViewController: UIViewController {
         posts.append(Post())
         print(index)
         
-        if isApplicant {
+        /*if isApplicant {
             Fetcher.fetchResume(id: postsID[index]) { (post) in
                 self.posts[index] = post
                 DispatchQueue.main.async {
@@ -165,6 +155,16 @@ class NewsfeedViewController: UIViewController {
                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadNewsfeed"), object: nil)
                 }
             }
-        }
+        }*/
     }
-}*/
+}
+
+extension String {
+    func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+    
+        return boundingBox.height
+    }
+}
+

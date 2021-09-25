@@ -27,6 +27,11 @@
 		F6F24AA226FF474A009BD3EE /* Newsfeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6F24AA126FF474A009BD3EE /* Newsfeed.storyboard */; };
 		F6F24AA626FF47A7009BD3EE /* NewsfeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F24AA526FF47A7009BD3EE /* NewsfeedViewController.swift */; };
 		F6F24AA926FF47FE009BD3EE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F24AA826FF47FE009BD3EE /* Post.swift */; };
+		F6F24AAD26FF4C0F009BD3EE /* NewsfeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F24AAC26FF4C0F009BD3EE /* NewsfeedTableViewCell.swift */; };
+		F6F24AAF26FF4DAE009BD3EE /* Homepage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6F24AAE26FF4DAE009BD3EE /* Homepage.storyboard */; };
+		F6F24AB226FF4E4C009BD3EE /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F24AB126FF4E4C009BD3EE /* HomepageViewController.swift */; };
+		F6F24AB426FF4F82009BD3EE /* Newpost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6F24AB326FF4F82009BD3EE /* Newpost.storyboard */; };
+		F6F24AB726FF5132009BD3EE /* NewpostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F24AB626FF5132009BD3EE /* NewpostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +82,11 @@
 		F6F24AA126FF474A009BD3EE /* Newsfeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Newsfeed.storyboard; sourceTree = "<group>"; };
 		F6F24AA526FF47A7009BD3EE /* NewsfeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedViewController.swift; sourceTree = "<group>"; };
 		F6F24AA826FF47FE009BD3EE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		F6F24AAC26FF4C0F009BD3EE /* NewsfeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedTableViewCell.swift; sourceTree = "<group>"; };
+		F6F24AAE26FF4DAE009BD3EE /* Homepage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Homepage.storyboard; sourceTree = "<group>"; };
+		F6F24AB126FF4E4C009BD3EE /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
+		F6F24AB326FF4F82009BD3EE /* Newpost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Newpost.storyboard; sourceTree = "<group>"; };
+		F6F24AB626FF5132009BD3EE /* NewpostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewpostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +146,8 @@
 				F66D425926FEE9B1001AB5F1 /* Main.storyboard */,
 				F6F24A9F26FF471C009BD3EE /* TabBar.storyboard */,
 				F6F24AA126FF474A009BD3EE /* Newsfeed.storyboard */,
+				F6F24AAE26FF4DAE009BD3EE /* Homepage.storyboard */,
+				F6F24AB326FF4F82009BD3EE /* Newpost.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -145,6 +157,8 @@
 			children = (
 				F6F24AA326FF4777009BD3EE /* Authentication */,
 				F6F24AA426FF4787009BD3EE /* Newsfeed */,
+				F6F24AB026FF4E19009BD3EE /* Homepage */,
+				F6F24AB526FF50FC009BD3EE /* Newpost */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -227,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				F6F24AA526FF47A7009BD3EE /* NewsfeedViewController.swift */,
+				F6F24AAC26FF4C0F009BD3EE /* NewsfeedTableViewCell.swift */,
 			);
 			path = Newsfeed;
 			sourceTree = "<group>";
@@ -237,6 +252,22 @@
 				F6F24AA826FF47FE009BD3EE /* Post.swift */,
 			);
 			path = Varaibles;
+			sourceTree = "<group>";
+		};
+		F6F24AB026FF4E19009BD3EE /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+				F6F24AB126FF4E4C009BD3EE /* HomepageViewController.swift */,
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
+		F6F24AB526FF50FC009BD3EE /* Newpost */ = {
+			isa = PBXGroup;
+			children = (
+				F6F24AB626FF5132009BD3EE /* NewpostViewController.swift */,
+			);
+			path = Newpost;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,11 +380,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6F24AA026FF471C009BD3EE /* TabBar.storyboard in Resources */,
+				F6F24AB426FF4F82009BD3EE /* Newpost.storyboard in Resources */,
 				F66D425B26FEE9B1001AB5F1 /* Main.storyboard in Resources */,
 				F66D426926FEEA89001AB5F1 /* GoogleService-Info.plist in Resources */,
 				F6F24AA226FF474A009BD3EE /* Newsfeed.storyboard in Resources */,
 				F6AEDE2826FEE3A000E5737E /* LaunchScreen.storyboard in Resources */,
 				F6AEDE2526FEE3A000E5737E /* Assets.xcassets in Resources */,
+				F6F24AAF26FF4DAE009BD3EE /* Homepage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +516,10 @@
 			files = (
 				F66D426526FEEA36001AB5F1 /* Utilities.swift in Sources */,
 				F6F24AA626FF47A7009BD3EE /* NewsfeedViewController.swift in Sources */,
+				F6F24AAD26FF4C0F009BD3EE /* NewsfeedTableViewCell.swift in Sources */,
+				F6F24AB726FF5132009BD3EE /* NewpostViewController.swift in Sources */,
 				F66D426026FEE9C1001AB5F1 /* SignUpViewController.swift in Sources */,
+				F6F24AB226FF4E4C009BD3EE /* HomepageViewController.swift in Sources */,
 				F6F24AA926FF47FE009BD3EE /* Post.swift in Sources */,
 				F6AEDE1C26FEE39B00E5737E /* AppDelegate.swift in Sources */,
 				F6AEDE1E26FEE39B00E5737E /* SceneDelegate.swift in Sources */,
