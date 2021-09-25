@@ -14,7 +14,6 @@ class NewsfeedViewController: UIViewController {
     
     var posts: [Post] = [Post]()
     var postsID: [String] = []
-    var isApplicant = false
     var name = "Name"
     var postID: String?
     
@@ -31,10 +30,10 @@ class NewsfeedViewController: UIViewController {
     }
     
     func setUp() {
-        /*NewsfeedTableView.delegate = self
+        NewsfeedTableView.delegate = self
         NewsfeedTableView.dataSource = self
         NewsfeedTableView.prefetchDataSource = self
-        NewsfeedTableView.separatorStyle = UITableViewCell.SeparatorStyle.none*/
+        NewsfeedTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewsfeed), name: NSNotification.Name(rawValue: "loadNewsfeed"), object: nil)
         
@@ -47,6 +46,13 @@ class NewsfeedViewController: UIViewController {
     
     func fetchData() {
         if HomepageViewController.username == nil {
+            Fetcher.fetchPostID() { (ids) in
+                self.postsID = ids
+                
+                for i in 0...5 {
+                    self.loadNext(index: i)
+                }
+            }
             Fetcher.fetchAll()
             for i in 0...5 {
                 self.loadNext(index: i)
@@ -68,13 +74,13 @@ class NewsfeedViewController: UIViewController {
 extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching {
 
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        //for id in indexPaths {
-        //    loadNext(index: id.row)
-        //}
+        for id in indexPaths {
+            loadNext(index: id.row)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return posts.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -91,8 +97,9 @@ extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource, UI
         cell.date = tmp.date
         cell.affirmation = tmp.affirmation
         cell.content = tmp.content
-        
-        return UITableViewCell()
+        cell.selectionStyle = .none
+
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -132,22 +139,12 @@ extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource, UI
         posts.append(Post())
         print(index)
         
-        /*if isApplicant {
-            Fetcher.fetchResume(id: postsID[index]) { (post) in
-                self.posts[index] = post
-                DispatchQueue.main.async {
-                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadNewsfeed"), object: nil)
-                }
+        Fetcher.fetchPost(id: postsID[index]) { (post) in
+            self.posts[index] = post
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadNewsfeed"), object: nil)
             }
-        } else {
-            Fetcher.fetchPost(id: postsID[index]) { (post) in
-                self.posts[index] = post
-                //print(self.postsID[index], post.id)
-                DispatchQueue.main.async {
-                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadNewsfeed"), object: nil)
-                }
-            }
-        }*/
+        }
     }
 }
 
