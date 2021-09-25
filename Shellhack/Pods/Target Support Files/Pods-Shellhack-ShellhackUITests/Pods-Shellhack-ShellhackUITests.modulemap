@@ -1,0 +1,6 @@
+framework module Pods_Shellhack_ShellhackUITests {
+  umbrella header "Pods-Shellhack-ShellhackUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

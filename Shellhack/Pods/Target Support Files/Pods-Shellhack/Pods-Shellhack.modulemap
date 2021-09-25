@@ -1,0 +1,6 @@
+framework module Pods_Shellhack {
+  umbrella header "Pods-Shellhack-umbrella.h"
+
+  export *
+  module * { export * }
+}
