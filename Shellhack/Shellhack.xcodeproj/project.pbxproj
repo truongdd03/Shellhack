@@ -14,6 +14,10 @@
 		F64D9DB526FF57280000C9EC /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64D9DB426FF57280000C9EC /* PostTableViewCell.swift */; };
 		F64D9DB826FF5A220000C9EC /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64D9DB726FF5A220000C9EC /* Fetcher.swift */; };
 		F64D9DBA26FF5AC70000C9EC /* Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64D9DB926FF5AC70000C9EC /* Writer.swift */; };
+		F64D9DBC26FF82F80000C9EC /* Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64D9DBB26FF82F80000C9EC /* Index.swift */; };
+		F64D9DC026FF87D30000C9EC /* stopWords.txt in Resources */ = {isa = PBXBuildFile; fileRef = F64D9DBF26FF87D30000C9EC /* stopWords.txt */; };
+		F64D9DC226FF88A20000C9EC /* Remover.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64D9DC126FF88A20000C9EC /* Remover.swift */; };
+		F64D9DC426FF8A170000C9EC /* NewsfeedSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64D9DC326FF8A160000C9EC /* NewsfeedSearchViewController.swift */; };
 		F66D425B26FEE9B1001AB5F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66D425926FEE9B1001AB5F1 /* Main.storyboard */; };
 		F66D426026FEE9C1001AB5F1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D425D26FEE9C1001AB5F1 /* SignUpViewController.swift */; };
 		F66D426126FEE9C1001AB5F1 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D425E26FEE9C1001AB5F1 /* LobbyViewController.swift */; };
@@ -69,6 +73,10 @@
 		F64D9DB426FF57280000C9EC /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		F64D9DB726FF5A220000C9EC /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		F64D9DB926FF5AC70000C9EC /* Writer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Writer.swift; sourceTree = "<group>"; };
+		F64D9DBB26FF82F80000C9EC /* Index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Index.swift; sourceTree = "<group>"; };
+		F64D9DBF26FF87D30000C9EC /* stopWords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stopWords.txt; sourceTree = "<group>"; };
+		F64D9DC126FF88A20000C9EC /* Remover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remover.swift; sourceTree = "<group>"; };
+		F64D9DC326FF8A160000C9EC /* NewsfeedSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedSearchViewController.swift; sourceTree = "<group>"; };
 		F66D425A26FEE9B1001AB5F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F66D425D26FEE9C1001AB5F1 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F66D425E26FEE9C1001AB5F1 /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
@@ -152,9 +160,19 @@
 			isa = PBXGroup;
 			children = (
 				F64D9DB726FF5A220000C9EC /* Fetcher.swift */,
+				F64D9DBB26FF82F80000C9EC /* Index.swift */,
 				F64D9DB926FF5AC70000C9EC /* Writer.swift */,
+				F64D9DC126FF88A20000C9EC /* Remover.swift */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		F64D9DBD26FF83180000C9EC /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				F64D9DBF26FF87D30000C9EC /* stopWords.txt */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		F66D425826FEE9B1001AB5F1 /* Storyboards */ = {
@@ -183,6 +201,7 @@
 		F66D426326FEEA00001AB5F1 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				F64D9DBD26FF83180000C9EC /* Storage */,
 				F64D9DB626FF5A060000C9EC /* Firebase */,
 				F6F24AA726FF47D9009BD3EE /* Varaibles */,
 				F66D426426FEEA36001AB5F1 /* Utilities.swift */,
@@ -260,6 +279,7 @@
 			children = (
 				F6F24AA526FF47A7009BD3EE /* NewsfeedViewController.swift */,
 				F6F24AAC26FF4C0F009BD3EE /* NewsfeedTableViewCell.swift */,
+				F64D9DC326FF8A160000C9EC /* NewsfeedSearchViewController.swift */,
 			);
 			path = Newsfeed;
 			sourceTree = "<group>";
@@ -406,6 +426,7 @@
 				F6F24AA226FF474A009BD3EE /* Newsfeed.storyboard in Resources */,
 				F6AEDE2826FEE3A000E5737E /* LaunchScreen.storyboard in Resources */,
 				F6AEDE2526FEE3A000E5737E /* Assets.xcassets in Resources */,
+				F64D9DC026FF87D30000C9EC /* stopWords.txt in Resources */,
 				F6F24AAF26FF4DAE009BD3EE /* Homepage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,12 +556,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F64D9DB326FF57030000C9EC /* AllPostsViewController.swift in Sources */,
+				F64D9DC226FF88A20000C9EC /* Remover.swift in Sources */,
 				F66D426526FEEA36001AB5F1 /* Utilities.swift in Sources */,
 				F64D9DB526FF57280000C9EC /* PostTableViewCell.swift in Sources */,
 				F6F24AA626FF47A7009BD3EE /* NewsfeedViewController.swift in Sources */,
 				F6F24AAD26FF4C0F009BD3EE /* NewsfeedTableViewCell.swift in Sources */,
 				F6F24AB726FF5132009BD3EE /* NewpostViewController.swift in Sources */,
 				F64D9DBA26FF5AC70000C9EC /* Writer.swift in Sources */,
+				F64D9DBC26FF82F80000C9EC /* Index.swift in Sources */,
 				F66D426026FEE9C1001AB5F1 /* SignUpViewController.swift in Sources */,
 				F64D9DB826FF5A220000C9EC /* Fetcher.swift in Sources */,
 				F6F24AB226FF4E4C009BD3EE /* HomepageViewController.swift in Sources */,
@@ -549,6 +572,7 @@
 				F6AEDE1E26FEE39B00E5737E /* SceneDelegate.swift in Sources */,
 				F66D426226FEE9C1001AB5F1 /* LoginViewController.swift in Sources */,
 				F66D426126FEE9C1001AB5F1 /* LobbyViewController.swift in Sources */,
+				F64D9DC426FF8A170000C9EC /* NewsfeedSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

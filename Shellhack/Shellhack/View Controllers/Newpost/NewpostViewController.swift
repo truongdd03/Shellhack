@@ -68,7 +68,7 @@ class NewpostViewController: UIViewController, UITextFieldDelegate {
         post.id = Writer.writePost(post: post)
         AllPostsViewController.myPosts!.append(MyPost(post: post, point: 0))
 
-        //Index.updatePost(tags: post.tags, content: post.content, postID: post.id!, isDelete: false)
+        Index.updatePost(content: post.affirmation + " " + post.content, postID: post.id!, isDelete: false)
         
         resetInputs()
         alert(title: "Successfully posted!", message: "")

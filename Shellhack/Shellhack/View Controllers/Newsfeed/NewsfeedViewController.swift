@@ -9,6 +9,7 @@ import UIKit
 
 class NewsfeedViewController: UIViewController {
     @IBOutlet weak var NewsfeedTableView: UITableView!
+    @IBOutlet weak var ResultsLabel: UILabel!
     
     static var postsSent: [String]?
     
@@ -20,11 +21,20 @@ class NewsfeedViewController: UIViewController {
     var index = -1
     var clicked = false
     
+    var query: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass.circle"), style: .plain, target: self, action: #selector(searchTapped))
         title = name
+        
+        if query == nil {
+            ResultsLabel.isHidden = true
+        } else {
+            ResultsLabel.isHidden = false
+            ResultsLabel.text = query
+        }
         
         setUp()
     }

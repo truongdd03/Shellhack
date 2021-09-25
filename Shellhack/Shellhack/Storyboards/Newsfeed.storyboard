@@ -40,8 +40,15 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
+                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results for: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Vz-ko-8Qm">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="X5T-dG-tHe">
-                                    <rect key="frame" x="0.0" y="367" width="414" height="8"/>
+                                    <rect key="frame" x="0.0" y="411" width="414" height="8"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="systemPinkColor"/>
                                     <constraints>
@@ -50,7 +57,7 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsfeedCell" rowHeight="300" id="Nic-xN-bnI" customClass="NewsfeedTableViewCell" customModule="Shellhack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="300"/>
+                                        <rect key="frame" x="0.0" y="88.5" width="414" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nic-xN-bnI" id="k0H-JF-oly">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
@@ -101,9 +108,9 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfx-Bb-tEK">
                                                     <rect key="frame" x="10" y="143" width="394" height="157"/>
-                                                    <mutableString key="text">Fetch Technology Vietnam is a comprehensive global provider of HR and Talent Acquisition Services, focusing primarily in the technology fields. Founded in 2016, Fetch Technology Vietnam helps foreign companies of all types and sizes reach their potential by providing the talent and support to efficiently build and scale a high-performing, distributed workforce in Vietnam.
+                                                    <string key="text">Fetch Technology Vietnam is a comprehensive global provider of HR and Talent Acquisition Services, focusing primarily in the technology fields. Founded in 2016, Fetch Technology Vietnam helps foreign companies of all types and sizes reach their potential by providing the talent and support to efficiently build and scale a high-performing, distributed workforce in Vietnam.
 
-Our mission is to offer Vietnam’s most talented technologists a platform to connect with some of the world’s leading tech companies and build their expertise on a global scale. Over 4 years, Fetch has built a good reputation and is trusted by many Vietnamese and foreign companies; And Fetch will continue its good work to bridge the divide between the World and the Vietnam Tech sector.</mutableString>
+Our mission is to offer Vietnam’s most talented technologists a platform to connect with some of the world’s leading tech companies and build their expertise on a global scale. Over 4 years, Fetch has built a good reputation and is trusted by many Vietnamese and foreign companies; And Fetch will continue its good work to bridge the divide between the World and the Vietnam Tech sector.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -142,13 +149,14 @@ Our mission is to offer Vietnam’s most talented technologists a platform to co
                         <constraints>
                             <constraint firstItem="YhV-Ln-rv3" firstAttribute="trailing" secondItem="ejY-gC-bga" secondAttribute="trailing" id="Qio-nZ-stv"/>
                             <constraint firstItem="ejY-gC-bga" firstAttribute="leading" secondItem="YhV-Ln-rv3" secondAttribute="leading" id="UXH-0k-218"/>
-                            <constraint firstItem="ejY-gC-bga" firstAttribute="top" secondItem="YhV-Ln-rv3" secondAttribute="top" id="WWc-1P-QN0"/>
+                            <constraint firstItem="ejY-gC-bga" firstAttribute="top" secondItem="YhV-Ln-rv3" secondAttribute="top" id="iLV-tF-eOW"/>
                             <constraint firstItem="YhV-Ln-rv3" firstAttribute="bottom" secondItem="ejY-gC-bga" secondAttribute="bottom" id="xCH-RZ-Ehi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="n3R-XT-rGW"/>
                     <connections>
                         <outlet property="NewsfeedTableView" destination="ejY-gC-bga" id="8z4-yG-Kny"/>
+                        <outlet property="ResultsLabel" destination="6Vz-ko-8Qm" id="8jV-ce-OVk"/>
                         <segue destination="mm1-xy-Whn" kind="push" id="DGh-Yt-26w"/>
                     </connections>
                 </viewController>
@@ -168,32 +176,18 @@ Our mission is to offer Vietnam’s most talented technologists a platform to co
                                 <rect key="frame" x="0.0" y="88" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5T-nK-7GH">
-                                <rect key="frame" x="107" y="239" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="2zn-Da-ZpV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Search"/>
-                                <connections>
-                                    <action selector="searchButtonTapped:" destination="mm1-xy-Whn" eventType="touchUpInside" id="LVR-MK-Qjk"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zqb-m7-9yD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="T5T-nK-7GH" firstAttribute="top" secondItem="rW8-ms-TbU" secondAttribute="bottom" constant="100" id="77C-UK-N1D"/>
                             <constraint firstItem="rW8-ms-TbU" firstAttribute="leading" secondItem="zqb-m7-9yD" secondAttribute="leading" id="81W-or-LrS"/>
                             <constraint firstItem="rW8-ms-TbU" firstAttribute="trailing" secondItem="zqb-m7-9yD" secondAttribute="trailing" id="Ehq-nU-i2b"/>
                             <constraint firstItem="rW8-ms-TbU" firstAttribute="top" secondItem="zqb-m7-9yD" secondAttribute="top" id="kO2-9d-YXJ"/>
-                            <constraint firstItem="T5T-nK-7GH" firstAttribute="centerX" secondItem="yXM-1d-xlT" secondAttribute="centerX" id="sQS-Hl-9g8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="J8O-0F-hiC"/>
                     <connections>
                         <outlet property="KeywordsSearchBar" destination="rW8-ms-TbU" id="4PW-Yk-8AT"/>
-                        <outlet property="SearchButton" destination="T5T-nK-7GH" id="I4o-JJ-kwF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kxu-Hh-9IY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

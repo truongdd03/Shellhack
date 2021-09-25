@@ -65,6 +65,28 @@ class Fetcher {
         }
     }
     
+    static func filterPostID(keywords: [String], completion: @escaping ([String]) -> Void) {
+        let ddb = Database.database().reference().child("Dict")
+        var dict = [String: Int]()
+        
+        let group = DispatchGroup()
+        
+        for tag in keywords {
+            group.enter()
+            ddb.child(tag).getData { (err, snapshot) in
+                let data = snapshot.value as? [String: Int] ?? [String: Int]()
+                for key in data.keys {
+                    dict[key] = (dict[key] ?? 0) + data[key]!
+                }
+                group.leave()
+            }
+        }
+        
+        group.notify(queue: .main) {
+            updatePostID(dict: dict, completion: completion)
+        }
+    }
+    
     static func fetchPostID(completion: @escaping ([String]) -> Void) {
         var ids = [String]()
         
@@ -85,20 +107,6 @@ class Fetcher {
             dict[$0]! > dict[$1]!
         }
         
-        print(postsID)
-        
-        // Fetch unrelevant posts
-        Firestore.firestore().collection("Posts").getDocuments { (snapshot, err) in
-            if let documents = snapshot?.documents {
-                for document in documents {
-                    let id = document.documentID
-                    if dict[id] == nil {
-                        postsID.append(id)
-                    }
-                }
-                
-                completion(postsID)
-            }
-        }
+        completion(postsID)
     }
 }
