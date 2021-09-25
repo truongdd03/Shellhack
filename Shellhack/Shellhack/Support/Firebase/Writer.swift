@@ -28,4 +28,12 @@ class Writer {
         let uid = Auth.auth().currentUser!.uid
         Firestore.firestore().collection("Usernames").document(uid).setData(["Username": username])
     }
+    
+    static func updatePost(postID: String, post: Post) {
+        do {
+            try Firestore.firestore().collection("Posts").document(postID).setData(from: post.self)
+        } catch {
+            print("Error")
+        }
+    }
 }

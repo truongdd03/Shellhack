@@ -16,7 +16,11 @@ class PostTableViewCell: UITableViewCell {
 
     var point: Int? {
         didSet {
-            PointLabel.text = "0"
+            if let point = point {
+                PointLabel.text = String(point)
+            } else {
+                PointLabel.text = "Ungraded"
+            }
         }
     }
     

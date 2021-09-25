@@ -102,12 +102,13 @@ extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource, UI
         let tmp = posts[indexPath.row]
         
         cell.id = tmp.id
-        cell.postID = postID
         cell.name = tmp.userName
         cell.date = tmp.date
         cell.affirmation = tmp.affirmation
         cell.content = tmp.content
         cell.selectionStyle = .none
+        cell.point = tmp.calculatePoint()
+        cell.post = tmp
 
         return cell
     }
@@ -134,10 +135,10 @@ extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource, UI
             let height = str.height(withConstrainedWidth: width, font: .systemFont(ofSize: 14))
         
             if index == indexPath.row && !clicked {
-                return height + 160
+                return height + 180
             }
                 
-            return min(height + 160, 300)
+            return min(height + 180, 300)
         }
         return 50
     }
@@ -147,7 +148,6 @@ extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource, UI
         if index < posts.count { return }
         
         posts.append(Post())
-        print(index)
         
         Fetcher.fetchPost(id: postsID[index]) { (post) in
             self.posts[index] = post

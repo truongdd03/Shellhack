@@ -58,7 +58,7 @@ class Fetcher {
             for key in dict.keys {
                 fetchPost(id: key) { (post) in
                     fetchPoint(postID: key) { (value) in
-                        AllPostsViewController.myPosts?.append(MyPost(post: post, point: value))
+                        AllPostsViewController.myPosts?.append(post)
                     }
                 }
             }

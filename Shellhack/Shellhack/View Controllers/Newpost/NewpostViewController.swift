@@ -66,7 +66,7 @@ class NewpostViewController: UIViewController, UITextFieldDelegate {
         let post = Post(userName: HomepageViewController.username!, date: "", affirmation: AffirmationInput.text, content: ContentInput.text)
         post.updateDate()
         post.id = Writer.writePost(post: post)
-        AllPostsViewController.myPosts!.append(MyPost(post: post, point: 0))
+        AllPostsViewController.myPosts!.append(post)
 
         Index.updatePost(content: post.affirmation + " " + post.content, postID: post.id!, isDelete: false)
         

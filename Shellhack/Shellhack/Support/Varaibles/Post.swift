@@ -11,28 +11,22 @@ import UIKit
 import FirebaseFirestoreSwift
 import Firebase
 
-class MyPost: NSObject {
-    var post: Post
-    var point: Int
-    
-    init(post: Post, point: Int) {
-        self.post = post
-        self.point = point
-    }
-}
-
 class Post: NSObject, Codable {
     @DocumentID var id: String?
     var userName: String
     var date: String
     var affirmation: String
     var content: String
+    var upVotes: Int
+    var downVotes: Int
     
     override init() {
         self.userName = ""
         self.date = ""
         self.affirmation = ""
         self.content = ""
+        self.upVotes = 0
+        self.downVotes = 0
     }
         
     init(userName: String, date: String, affirmation: String, content: String) {
@@ -40,6 +34,18 @@ class Post: NSObject, Codable {
         self.date = date
         self.affirmation = affirmation
         self.content = content
+        self.upVotes = 0
+        self.downVotes = 0
+    }
+    
+    func calculatePoint() -> Int? {
+        if self.upVotes + self.downVotes <= 10 {
+            return nil
+        }
+        
+        let point = self.upVotes * 100 / (self.upVotes + self.downVotes)
+
+        return Int(point)
     }
     
     func updateDate() {

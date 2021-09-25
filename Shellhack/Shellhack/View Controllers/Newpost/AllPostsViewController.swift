@@ -8,7 +8,7 @@
 import UIKit
 
 class AllPostsViewController: UIViewController {
-    static var myPosts: [MyPost]? = [MyPost]()
+    static var myPosts: [Post]? = [Post]()
     
     @IBOutlet weak var PostsTableView: UITableView!
     
@@ -16,7 +16,7 @@ class AllPostsViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Your posts"
-        
+                
         PostsTableView.delegate = self
         PostsTableView.dataSource = self
         PostsTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
@@ -31,27 +31,28 @@ extension AllPostsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostTableViewCell
-        let post = AllPostsViewController.myPosts![indexPath.row].post
+        let post = AllPostsViewController.myPosts![indexPath.row]
                 
         cell.affirmation = post.affirmation
         cell.content = post.content
-        cell.point = AllPostsViewController.myPosts![indexPath.row].point
+        cell.point = post.calculatePoint()
+        print(post.upVotes)
+        print(post.calculatePoint())
         cell.date = post.date
         
         return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let str = AllPostsViewController.myPosts![indexPath.row].post.content
+        let str = AllPostsViewController.myPosts![indexPath.row].content
         let width = view.frame.size.width - 20
         let height = str.height(withConstrainedWidth: width, font: .systemFont(ofSize: 14))
         return min(height + 120, 400)
-        //return 200
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let post = AllPostsViewController.myPosts![indexPath.row].post
+            let post = AllPostsViewController.myPosts![indexPath.row]
             
             AllPostsViewController.myPosts!.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
