@@ -1,5 +1,5 @@
 //
-//  NewsfeedTableViewCell.swift
+//  PostTableViewCell.swift
 //  Shellhack
 //
 //  Created by Don Truong on 9/25/21.
@@ -7,35 +7,35 @@
 
 import UIKit
 
-class NewsfeedTableViewCell: UITableViewCell {
-    @IBOutlet weak var AvatarView: UIImageView!
-    @IBOutlet weak var NameLabel: UILabel!
+class PostTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var PointLabel: UILabel!
     @IBOutlet weak var DateLabel: UILabel!
-    @IBOutlet weak var TitleLabel: UILabel!
+    @IBOutlet weak var AffirmationLabel: UILabel!
     @IBOutlet weak var ContentLabel: UILabel!
-    
-    var id: String?
-    var name: String? {
+
+    var point: Int? {
         didSet {
-            NameLabel.text = name
+            PointLabel.text = String(point!)
         }
     }
+    
     var date: String? {
         didSet {
             DateLabel.text = date
         }
     }
+    
     var affirmation: String? {
         didSet {
-            TitleLabel.text = affirmation
+            AffirmationLabel.text = affirmation
         }
     }
+    
     var content: String? {
         didSet {
             ContentLabel.text = content
         }
     }
-    var postID: String?
 
 }
-

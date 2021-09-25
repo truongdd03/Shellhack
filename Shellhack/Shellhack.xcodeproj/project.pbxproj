@@ -10,6 +10,8 @@
 		3DE07C03782A4E70AEEBC6CB /* Pods_ShellhackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E993CB1723C4895FB26CB /* Pods_ShellhackTests.framework */; };
 		B9A93616A59895E9836582FC /* Pods_Shellhack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A1FA1B64EC622EDD5684E8 /* Pods_Shellhack.framework */; };
 		F398E5BF4944A5F24D447D02 /* Pods_Shellhack_ShellhackUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE16E09A361C7CB4E86180A /* Pods_Shellhack_ShellhackUITests.framework */; };
+		F64D9DB326FF57030000C9EC /* AllPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64D9DB226FF57020000C9EC /* AllPostsViewController.swift */; };
+		F64D9DB526FF57280000C9EC /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64D9DB426FF57280000C9EC /* PostTableViewCell.swift */; };
 		F66D425B26FEE9B1001AB5F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66D425926FEE9B1001AB5F1 /* Main.storyboard */; };
 		F66D426026FEE9C1001AB5F1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D425D26FEE9C1001AB5F1 /* SignUpViewController.swift */; };
 		F66D426126FEE9C1001AB5F1 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D425E26FEE9C1001AB5F1 /* LobbyViewController.swift */; };
@@ -61,6 +63,8 @@
 		ACE16E09A361C7CB4E86180A /* Pods_Shellhack_ShellhackUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shellhack_ShellhackUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDCC7E602001C807FD10312 /* Pods-Shellhack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shellhack.release.xcconfig"; path = "Target Support Files/Pods-Shellhack/Pods-Shellhack.release.xcconfig"; sourceTree = "<group>"; };
 		D19E926996D41C7D1FDE5031 /* Pods-Shellhack-ShellhackUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shellhack-ShellhackUITests.release.xcconfig"; path = "Target Support Files/Pods-Shellhack-ShellhackUITests/Pods-Shellhack-ShellhackUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F64D9DB226FF57020000C9EC /* AllPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPostsViewController.swift; sourceTree = "<group>"; };
+		F64D9DB426FF57280000C9EC /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		F66D425A26FEE9B1001AB5F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F66D425D26FEE9C1001AB5F1 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F66D425E26FEE9C1001AB5F1 /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
@@ -266,6 +270,8 @@
 			isa = PBXGroup;
 			children = (
 				F6F24AB626FF5132009BD3EE /* NewpostViewController.swift */,
+				F64D9DB226FF57020000C9EC /* AllPostsViewController.swift */,
+				F64D9DB426FF57280000C9EC /* PostTableViewCell.swift */,
 			);
 			path = Newpost;
 			sourceTree = "<group>";
@@ -514,7 +520,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F64D9DB326FF57030000C9EC /* AllPostsViewController.swift in Sources */,
 				F66D426526FEEA36001AB5F1 /* Utilities.swift in Sources */,
+				F64D9DB526FF57280000C9EC /* PostTableViewCell.swift in Sources */,
 				F6F24AA626FF47A7009BD3EE /* NewsfeedViewController.swift in Sources */,
 				F6F24AAD26FF4C0F009BD3EE /* NewsfeedTableViewCell.swift in Sources */,
 				F6F24AB726FF5132009BD3EE /* NewpostViewController.swift in Sources */,

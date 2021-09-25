@@ -185,10 +185,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="ApplicantsNumberLabel" destination="ara-f0-9Gc" id="TKR-1m-xDy"/>
-                                            <outlet property="CompanyLabel" destination="Bbm-lD-tuz" id="m8p-4d-W64"/>
+                                            <outlet property="AffirmationLabel" destination="Bbm-lD-tuz" id="KSh-lf-5Bx"/>
                                             <outlet property="ContentLabel" destination="oWc-BV-dF0" id="uvV-ia-9CH"/>
                                             <outlet property="DateLabel" destination="h9J-19-8Ya" id="UHf-67-vN0"/>
+                                            <outlet property="PointLabel" destination="57I-vC-h9t" id="2oi-LC-Nm7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

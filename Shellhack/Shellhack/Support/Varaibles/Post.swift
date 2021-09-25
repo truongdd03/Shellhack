@@ -13,11 +13,11 @@ import Firebase
 
 class MyPost: NSObject {
     var post: Post
-    var applicants: Int
+    var point: Int
     
-    init(post: Post, applicants: Int) {
+    init(post: Post, point: Int) {
         self.post = post
-        self.applicants = applicants
+        self.point = point
     }
 }
 
@@ -25,27 +25,21 @@ class Post: NSObject, Codable {
     @DocumentID var id: String?
     var userName: String
     var date: String
-    var title: String
+    var affirmation: String
     var content: String
-    var tags: [String]
-    var address: String
     
     override init() {
         self.userName = ""
         self.date = ""
-        self.title = ""
+        self.affirmation = ""
         self.content = ""
-        self.address = ""
-        self.tags = []
     }
         
-    init(userName: String, date: String, title: String, content: String, tags: [String], address: String) {
+    init(userName: String, date: String, affirmation: String, content: String) {
         self.userName = userName
         self.date = date
-        self.title = title
+        self.affirmation = affirmation
         self.content = content
-        self.tags = tags
-        self.address = address
     }
     
     func updateDate() {
@@ -54,44 +48,6 @@ class Post: NSObject, Codable {
         formatter.dateFormat = "yyyy/MM/dd"
         self.date = formatter.string(from: date)
     }
-    
-    func generateContent() -> String {
-        var content = ""
-        let tab = "    "
-        
-        content += "- Degrees: \n"
-        /*for degree in EducationViewController.degrees! {
-            content += "\(tab)+ \(degree.parseToString())\n"
-        }
-        
-        content += "- Awards: \n"
-        for award in EducationViewController.awards! {
-            content += "\(tab)+ \(award.parseToString())\n"
-        }
-        
-        content += "- Experience: \n"
-        for job in ExperienceViewController.jobs! {
-            content += "\(tab)+ \(job.parseToString())\n"
-        }
-        
-        content += "- Skills: \n"
-        for skill in SkillsViewController.skills! {
-            content += "\(tab)+ \(skill.parseToString())\n"
-        }
-        
-        content += "Phone number: \(BasicsViewController.basicInfo!.phone)"*/
-        return content
-    }
-    
-    func createResume() {
-        /*let info = BasicsViewController.basicInfo!
-        self.date = Utilities.reformatDate(date: info.birth, format: "yyyy/MM/dd")
-        self.title = info.name
-        self.address = info.address
-        
-        self.tags = SkillsViewController.tags!
-        self.userName = HomepageViewController.username!
-        self.content = generateContent()*/
-    }
+
 }
 

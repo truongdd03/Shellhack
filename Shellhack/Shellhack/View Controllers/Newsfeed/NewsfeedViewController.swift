@@ -97,7 +97,7 @@ extension NewsfeedViewController: UITableViewDelegate, UITableViewDataSource, UI
         cell.postID = postID
         cell.name = tmp.userName
         cell.date = tmp.date
-        cell.title = tmp.title
+        cell.affirmation = tmp.affirmation
         cell.content = tmp.content
         
         return UITableViewCell()
