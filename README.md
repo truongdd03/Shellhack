@@ -20,4 +20,5 @@ Reading news in the 4.0 era is very simple. With a reading device connected to t
 - Instead of just show similar posts, AI can be utilized to answer questions about the credibility of opinions.
 
 ## Video walkthrough
+![Introduction](https://youtu.be/RcDZsMGQgyQ)
 ![](demo.gif)
