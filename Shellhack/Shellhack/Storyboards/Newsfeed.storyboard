@@ -76,9 +76,9 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfx-Bb-tEK">
                                                     <rect key="frame" x="10" y="101.5" width="394" height="198.5"/>
-                                                    <mutableString key="text">Next his only boy meet the fat rose when. Do repair at we misery wanted remove remain income. Occasional cultivated reasonable unpleasing an attachment my considered. Having ask and coming object seemed put did admire figure. Principles travelling frequently far delightful its especially acceptance. Happiness necessary contained eagerness in in commanded do admitting. Favourable continuing difficulty had her solicitude far. Nor doubt off widow all death aware offer. We will up able in both do sing. 
+                                                    <string key="text">Next his only boy meet the fat rose when. Do repair at we misery wanted remove remain income. Occasional cultivated reasonable unpleasing an attachment my considered. Having ask and coming object seemed put did admire figure. Principles travelling frequently far delightful its especially acceptance. Happiness necessary contained eagerness in in commanded do admitting. Favourable continuing difficulty had her solicitude far. Nor doubt off widow all death aware offer. We will up able in both do sing. 
 Situation admitting promotion at or to perceived be. Mr acuteness we as estimable enjoyment up. An held late as felt know. Learn do allow solid to grave. Middleton suspicion age her attention. Chiefly several bed its wishing. Is so moments on chamber pressed to. Doubtful yet way properly answered humanity its desirous. Minuter believe service arrived civilly add all. Acuteness allowance an at eagerness favourite in extensive exquisite ye. 
-</mutableString>
+</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -123,7 +123,7 @@ Situation admitting promotion at or to perceived be. Mr acuteness we as estimabl
                                                             </constraints>
                                                         </stackView>
                                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQU-jB-Mqv">
-                                                            <rect key="frame" x="349.5" y="9.5" width="44.5" height="31"/>
+                                                            <rect key="frame" x="311" y="9.5" width="44.5" height="31"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" image="hand.thumbsdown" catalog="system">
                                                                 <color key="baseForegroundColor" systemColor="systemBlueColor"/>
@@ -133,7 +133,7 @@ Situation admitting promotion at or to perceived be. Mr acuteness we as estimabl
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbc-me-61k">
-                                                            <rect key="frame" x="305" y="9.5" width="44.5" height="31"/>
+                                                            <rect key="frame" x="266.5" y="9.5" width="44.5" height="31"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" image="hand.thumbsup" catalog="system">
                                                                 <color key="baseForegroundColor" systemColor="systemBlueColor"/>
@@ -142,6 +142,22 @@ Situation admitting promotion at or to perceived be. Mr acuteness we as estimabl
                                                                 <action selector="voteTapped:" destination="Nic-xN-bnI" eventType="touchUpInside" id="ksc-gI-05Z"/>
                                                             </connections>
                                                         </button>
+                                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pc-rW-6kc">
+                                                            <rect key="frame" x="347.5" y="9.5" width="46.5" height="31"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="book" catalog="system">
+                                                                <color key="baseForegroundColor" systemColor="systemBlueColor"/>
+                                                            </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="showResultTapped:" destination="Nic-xN-bnI" eventType="touchUpInside" id="Nl1-Lf-BRv"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPa-rE-b77">
+                                                            <rect key="frame" x="306.5" y="15" width="87.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" red="0.29421918429999999" green="0.51906615710000004" blue="0.81884246510000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.74861387550000003" green="0.86787553029999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
@@ -149,11 +165,15 @@ Situation admitting promotion at or to perceived be. Mr acuteness we as estimabl
                                                         <constraint firstItem="lQU-jB-Mqv" firstAttribute="leading" secondItem="Rbc-me-61k" secondAttribute="trailing" id="5ni-7M-C0U"/>
                                                         <constraint firstItem="qwJ-YY-BvR" firstAttribute="centerY" secondItem="0UR-1U-KbK" secondAttribute="centerY" id="67y-lD-FHq"/>
                                                         <constraint firstItem="0UR-1U-KbK" firstAttribute="centerY" secondItem="bJ5-fV-rrD" secondAttribute="centerY" id="E70-vi-0bH"/>
-                                                        <constraint firstAttribute="trailing" secondItem="lQU-jB-Mqv" secondAttribute="trailing" constant="20" id="Udw-qS-JuV"/>
+                                                        <constraint firstAttribute="trailing" secondItem="1pc-rW-6kc" secondAttribute="trailing" constant="20" id="Ewi-6W-bOB"/>
                                                         <constraint firstAttribute="height" constant="50" id="Uja-CC-zOP"/>
                                                         <constraint firstItem="Rbc-me-61k" firstAttribute="centerY" secondItem="0UR-1U-KbK" secondAttribute="centerY" id="bA9-LQ-9ol"/>
+                                                        <constraint firstItem="lQU-jB-Mqv" firstAttribute="rightMargin" secondItem="1pc-rW-6kc" secondAttribute="left" id="cx3-OY-wsH"/>
                                                         <constraint firstItem="0UR-1U-KbK" firstAttribute="leading" secondItem="bJ5-fV-rrD" secondAttribute="leading" constant="15" id="kXo-Qs-qYp"/>
                                                         <constraint firstItem="qwJ-YY-BvR" firstAttribute="leading" secondItem="0UR-1U-KbK" secondAttribute="trailing" constant="10" id="quQ-3f-nUz"/>
+                                                        <constraint firstItem="JPa-rE-b77" firstAttribute="centerY" secondItem="0UR-1U-KbK" secondAttribute="centerY" id="t0H-6z-GZx"/>
+                                                        <constraint firstAttribute="trailing" secondItem="JPa-rE-b77" secondAttribute="trailing" constant="20" id="xGd-yz-KgF"/>
+                                                        <constraint firstItem="1pc-rW-6kc" firstAttribute="centerY" secondItem="0UR-1U-KbK" secondAttribute="centerY" id="zpP-l2-Q0X"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -183,8 +203,10 @@ Situation admitting promotion at or to perceived be. Mr acuteness we as estimabl
                                             <outlet property="DateLabel" destination="Hb7-VL-dw6" id="OT4-Ui-RGw"/>
                                             <outlet property="DownVoteButton" destination="lQU-jB-Mqv" id="PvS-ep-Bd9"/>
                                             <outlet property="NameLabel" destination="SND-g4-eLD" id="Uwt-0j-a9v"/>
+                                            <outlet property="ShowResultButton" destination="1pc-rW-6kc" id="1oc-md-Ku2"/>
                                             <outlet property="TitleLabel" destination="cVg-Pp-85Q" id="pz9-bX-H36"/>
                                             <outlet property="UpVoteButton" destination="Rbc-me-61k" id="exQ-80-kzP"/>
+                                            <outlet property="VoteResultLabel" destination="JPa-rE-b77" id="b30-N4-XhM"/>
                                             <outlet property="WarningLabel" destination="6Wx-9k-drc" id="w60-RQ-RmJ"/>
                                         </connections>
                                     </tableViewCell>
@@ -242,6 +264,7 @@ Situation admitting promotion at or to perceived be. Mr acuteness we as estimabl
         </scene>
     </scenes>
     <resources>
+        <image name="book" catalog="system" width="128" height="99"/>
         <image name="doc.richtext.fill" catalog="system" width="115" height="128"/>
         <image name="hand.thumbsdown" catalog="system" width="128" height="128"/>
         <image name="hand.thumbsup" catalog="system" width="128" height="128"/>

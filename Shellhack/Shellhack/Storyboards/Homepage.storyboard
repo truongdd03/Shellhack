@@ -32,7 +32,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="C8L-53-VYu">
                                 <rect key="frame" x="164" y="384" width="86.5" height="128"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tZ-dP-m4x">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tZ-dP-m4x">
                                         <rect key="frame" x="0.0" y="0.0" width="86.5" height="71"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="50"/>
                                         <color key="textColor" systemColor="systemBlueColor"/>
@@ -52,17 +52,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ph5-GP-n59">
+                                <rect key="frame" x="0.0" y="88" width="414" height="8"/>
+                                <color key="backgroundColor" red="0.29421918429999999" green="0.51906615710000004" blue="0.81884246510000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="kTb-Nr-58L"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pcr-Fw-2ng"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hGo-JU-Avz" firstAttribute="centerX" secondItem="i1Z-h8-QE8" secondAttribute="centerX" id="3C6-m4-QVC"/>
                             <constraint firstItem="C8L-53-VYu" firstAttribute="centerX" secondItem="i1Z-h8-QE8" secondAttribute="centerX" id="3aW-Nq-rcv"/>
+                            <constraint firstItem="Ph5-GP-n59" firstAttribute="trailing" secondItem="pcr-Fw-2ng" secondAttribute="trailing" id="ELz-PR-eLO"/>
                             <constraint firstItem="Dbl-94-hAs" firstAttribute="top" secondItem="pcr-Fw-2ng" secondAttribute="top" constant="30" id="Ikg-3M-yhP"/>
                             <constraint firstItem="hGo-JU-Avz" firstAttribute="top" secondItem="Dbl-94-hAs" secondAttribute="bottom" constant="10" id="NoR-KK-8Dj"/>
                             <constraint firstItem="Dbl-94-hAs" firstAttribute="centerX" secondItem="i1Z-h8-QE8" secondAttribute="centerX" id="P95-9m-57u"/>
                             <constraint firstItem="pcr-Fw-2ng" firstAttribute="trailing" secondItem="cPv-pQ-57A" secondAttribute="trailing" constant="20" id="Qfp-Sk-yL4"/>
+                            <constraint firstItem="Ph5-GP-n59" firstAttribute="leading" secondItem="pcr-Fw-2ng" secondAttribute="leading" id="Tzf-5Z-pHb"/>
                             <constraint firstItem="cPv-pQ-57A" firstAttribute="top" secondItem="C8L-53-VYu" secondAttribute="bottom" constant="150" id="VEj-xu-4w9"/>
+                            <constraint firstItem="Ph5-GP-n59" firstAttribute="top" secondItem="pcr-Fw-2ng" secondAttribute="top" id="bjN-UI-PyM"/>
                             <constraint firstItem="cPv-pQ-57A" firstAttribute="leading" secondItem="pcr-Fw-2ng" secondAttribute="leading" constant="20" id="ndJ-Zv-LPa"/>
                             <constraint firstItem="C8L-53-VYu" firstAttribute="centerY" secondItem="i1Z-h8-QE8" secondAttribute="centerY" id="xm1-qz-2Wg"/>
                         </constraints>

@@ -17,7 +17,9 @@ class NewsfeedTableViewCell: UITableViewCell {
     
     @IBOutlet weak var UpVoteButton: UIButton!
     @IBOutlet weak var DownVoteButton: UIButton!
+    @IBOutlet weak var ShowResultButton: UIButton!
     
+    @IBOutlet weak var VoteResultLabel: UILabel!
     var id: String?
     var name: String? {
         didSet {
@@ -108,5 +110,17 @@ class NewsfeedTableViewCell: UITableViewCell {
         return true
     }
 
+    @IBAction func showResultTapped(_ sender: Any) {
+        VoteResultLabel.isHidden = false
+        if let tmp = point {
+            VoteResultLabel.text = "Approval Score: \(tmp)"
+        } else {
+            VoteResultLabel.text = "Approval Score: ungraded"
+        }
+        
+        UpVoteButton.isHidden = true
+        DownVoteButton.isHidden = true
+        ShowResultButton.isHidden = true
+    }
 }
 

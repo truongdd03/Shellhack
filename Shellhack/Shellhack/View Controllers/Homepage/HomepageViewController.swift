@@ -66,6 +66,8 @@ class HomepageViewController: UIViewController {
         
         if AllPostsViewController.myPosts!.count != 0 {
             point = point / AllPostsViewController.myPosts!.count
+        } else {
+            return 70
         }
         
         point = min(100, point + HomepageViewController.votesScores!)
