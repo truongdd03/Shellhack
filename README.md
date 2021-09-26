@@ -1,6 +1,6 @@
 # Shellhacks 2021 - Nuntinum
 
-This is a [project](https://youtu.be/RcDZsMGQgyQ) created for ShellHacks 2021.
+This is a [project](https://devpost.com/software/nuntium) created for ShellHacks 2021.
 
 ## Inspiration
 Reading news in the 4.0 era is very simple. With a reading device connected to the Internet, we easily can access hot news that appears every moment in the world. However, news providers can be any one of us, from a trustworthy news organization to individuals paid to write disingenuous news or heretics damaging the country's government by uploading prejudicial information. 
