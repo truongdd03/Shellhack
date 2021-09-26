@@ -21,4 +21,3 @@ Reading news in the 4.0 era is very simple. With a reading device connected to t
 
 ## Video walkthrough
 ![Introduction](https://youtu.be/RcDZsMGQgyQ)
-![](demo.gif)
