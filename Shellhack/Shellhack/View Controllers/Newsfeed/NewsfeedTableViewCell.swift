@@ -45,11 +45,11 @@ class NewsfeedTableViewCell: UITableViewCell {
             if point < 30 {
                 WarningLabel.text = "Warning: This post received multiple downvotes!"
                 WarningLabel.isHidden = false
-                WarningLabel.textColor = UIColor.systemRed
+                //WarningLabel.textColor = UIColor.systemRed
             } else if point > 85 {
                 WarningLabel.text = "This post receive multiple upvotes!"
                 WarningLabel.isHidden = false
-                WarningLabel.textColor = UIColor.systemGreen
+                //WarningLabel.textColor = UIColor.systemGreen
             } else {
                 WarningLabel.isHidden = true
             }

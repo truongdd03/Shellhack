@@ -16,25 +16,25 @@ class Utilities {
         
         bottomLine.frame = CGRect(x: 0, y: textfield.frame.height - 2, width: textfield.frame.width, height: 2)
         
-        bottomLine.backgroundColor = UIColor.systemRed.cgColor
+        bottomLine.backgroundColor = UIColor.systemBlue.cgColor
         textfield.borderStyle = .none
         textfield.layer.addSublayer(bottomLine)
     }
     
     static func styleSimpleTextField(textField: UITextField) {
         textField.layer.borderWidth = 1
-        textField.layer.borderColor = UIColor.systemRed.cgColor
+        textField.layer.borderColor = UIColor.systemBlue.cgColor
         textField.layer.cornerRadius = 5
     }
     
     static func styleTextView(textView: UITextView) {
         textView.layer.borderWidth = 1
-        textView.layer.borderColor = UIColor.systemRed.cgColor
+        textView.layer.borderColor = UIColor.systemBlue.cgColor
         textView.layer.cornerRadius = 5
     }
     
     static func styleFilledButton(_ button:UIButton) {
-        button.backgroundColor = UIColor.systemRed
+        button.backgroundColor = UIColor.systemBlue
         button.layer.cornerRadius = 15.0
         button.tintColor = UIColor.white
     }

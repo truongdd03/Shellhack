@@ -47,7 +47,7 @@ class NewsfeedSearchViewController: UIViewController, UISearchBarDelegate {
 
         Fetcher.filterPostID(keywords: keywords) { (postsID) in
             vc.postsID = postsID
-            vc.query = "\(postsID.count) Result(s) for: \(self.KeywordsSearchBar.text!)"
+            vc.name = "\(postsID.count) Result(s)"
             print(postsID)
             self.navigationController?.pushViewController(vc, animated: true)
         }
