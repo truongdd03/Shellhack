@@ -20,6 +20,3 @@ Reading news in the 4.0 era is very simple. With a reading device connected to t
 ## What's next for Nuntium
 - Mini-games for users with high-reliability scores can be added to encourage people to post and vote.
 - Instead of just show similar posts, AI can be utilized to answer questions about the credibility of opinions.
-
-## Video walkthrough
-![](demo.gif)
